@@ -1,0 +1,9 @@
+# 定义事件监听器
+org.springframework.context.ApplicationListener=\
+  com.zero.springboot.listener.MyListener
+# 定义初始化器
+org.springframework.context.ApplicationContextInitializer=\
+  com.zero.springboot.listener.MyInitializer
+# 定义配置环境后置处理器
+org.springframework.boot.env.EnvironmentPostProcessor=\
+  com.zero.springboot.listener.MyEnvironmentPostProcessor

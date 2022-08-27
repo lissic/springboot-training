@@ -20,8 +20,9 @@ public class SpringbootTrainingApplication {
 
     public static void main(String[] args) {
         SpringApplication application = new SpringApplication(SpringbootTrainingApplication.class);
+        // 可以对application进行一系列的设置工作
         application.setLazyInitialization(true);
-
+        application.run(args);
     }
 
 }
