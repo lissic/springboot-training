@@ -1,8 +1,6 @@
 package com.zero.springboot.config.auto;
 
-import com.zero.springboot.beans.User;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
