@@ -1,6 +1,8 @@
 logging:
   level:
-    com.zero.springboot.controller: trace
+    appgroup: trace
   file:
     path: logs/
     name: app.log
+  group:
+    appgroup: com.zero.springboot.controller
