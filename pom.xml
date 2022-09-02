@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>base</module>
+        <module>web</module>
     </modules>
 
     <parent>
