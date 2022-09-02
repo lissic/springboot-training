@@ -3,6 +3,7 @@ package com.zero.springboot;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Import;
 
 /**
  * Spring Boot加载配置文件的三种方式：
@@ -12,14 +13,14 @@ import org.springframework.context.ConfigurableApplicationContext;
  */
 // @SpringBootApplication(scanBasePackages = {"com.zero.springboot.beans","com.zero.springboot.controller"})
 // @ImportResource("classpath:beans.xml")
-// @Import({com.zero.springboot.config.MyConfiguration.class,com.zero.springboot.config.auto.ConditionalConfig.class})
+// @Import({com.zero.springboot.config.MyConfiguration.class})
 @SpringBootApplication
 public class SpringbootTrainingApplication {
 
     public static void main(String[] args) {
         SpringApplication application = new SpringApplication(SpringbootTrainingApplication.class);
         // 可以对application进行一系列的设置工作
-         application.setLazyInitialization(true);
+        application.setLazyInitialization(true);
         ConfigurableApplicationContext context = application.run(args);
         // 通过conditional加载特定条件的bean
         System.out.println(context.getBean("user"));
